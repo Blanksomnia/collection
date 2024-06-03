@@ -1,0 +1,14 @@
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\bin\Debug\net6.0\HomeWorkCollection.exe
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\bin\Debug\net6.0\HomeWorkCollection.deps.json
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\bin\Debug\net6.0\HomeWorkCollection.runtimeconfig.json
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\bin\Debug\net6.0\HomeWorkCollection.dll
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\bin\Debug\net6.0\HomeWorkCollection.pdb
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.AssemblyInfoInputs.cache
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.AssemblyInfo.cs
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.csproj.CoreCompileInputs.cache
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.dll
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\refint\HomeWorkCollection.dll
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.pdb
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.genruntimeconfig.cache
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\ref\HomeWorkCollection.dll
