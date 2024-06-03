@@ -10,7 +10,7 @@ namespace HomeWorkCollection
      {
         public string TaskLoop(string f)
         {
-            Console.WriteLine("Введите exit, выйти");
+            Console.WriteLine("Введите exit, чтобы выйти, или нажмите enter, чтобы продолжить");
             string Exit = Console.ReadLine();
             if (Exit != "exit")
             {
@@ -47,7 +47,7 @@ namespace HomeWorkCollection
                 return TaskLoop("task");
             }
         }
-        private List<string> list1 = new List<string>();
+        private Dictionary<string, int> list1 = new Dictionary<string, int>();
         public string TaskTwo
         {
             get
@@ -56,15 +56,13 @@ namespace HomeWorkCollection
                 bool while0 = false;
                 while (while0 == false)
                 {
-                    List<string> list2 = new List<string>();
                     Console.Write("введите имя ученика: ");
                     string name = Console.ReadLine();
-                    list1.Add(name);
                     Console.Write("введите оценку от 2 до 5 ученику: ");
                     string number = Console.ReadLine();
                     if (number == "2" || number == "3" || number == "4" || number == "5")
                     {
-                        list1.Add(number);
+                        list1.Add(name, Convert.ToInt32(number));
                     }
                     else
                     {
@@ -83,20 +81,19 @@ namespace HomeWorkCollection
         public string TaskTwo1 {
             get
             {
-                for (int i = 0; i < list1.Count; i++)
+                foreach (KeyValuePair<string, int> kvp in list1)
                 {
-                    if (i % 2 == 0)
-                        Console.WriteLine("имя - {0}", list1[i]);
+                    Console.WriteLine("имя - {0}", kvp.Key);
                 }
                 while (true)
                 {
                     Console.Write("Выберите имя из списка: ");
                     string f = Console.ReadLine();
-                    for (int i = 0; i < list1.Count; i++)
+                    foreach (KeyValuePair<string, int> kvp in list1)
                     {
-                        if(f == list1[i] && i % 2 == 0)
+                        if(f == kvp.Key)
                         {
-                            Console.WriteLine("имя ученика - {0}, оценка - {1}",list1[i], list1[i + 1]);
+                            Console.WriteLine("имя ученика - {0}, оценка - {1}", kvp.Key, kvp.Value);
                         }
                         else
                         {
