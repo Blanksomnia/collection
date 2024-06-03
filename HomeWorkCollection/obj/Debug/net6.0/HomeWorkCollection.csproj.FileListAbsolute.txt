@@ -12,3 +12,4 @@ C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollectio
 C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.pdb
 C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.genruntimeconfig.cache
 C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\ref\HomeWorkCollection.dll
+C:\Users\sedus\OneDrive\Рабочий стол\домашка\HomeWorkCollection\HomeWorkCollection\obj\Debug\net6.0\HomeWorkCollection.sourcelink.json
