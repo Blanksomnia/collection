@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HomeWorkCollection
@@ -106,43 +108,60 @@ namespace HomeWorkCollection
         } 
      }
 
-    
 
-    // class TaskThree
-    //{
-    //    public string Task3 { get 
-    //        {
-    //            var list = new List<string>() { };
-    //            Console.WriteLine("создайте список от 3 до 6 элементом: ");
-    //            for (int i = 0; i < 6; i++)
-    //            {
-    //                string listadd = Console.ReadLine();
-    //                if (listadd == "" && i <= 6 && i >= 3)
-    //                {
-    //                    break;
-    //                }
-    //                list.Add(listadd);
-    //            }
-    //            Console.WriteLine("\nпорядок -");
-    //            for (int a = 0; a < list.Count; a++)
-    //            {
-    //                Console.WriteLine(list[a]);
-    //            }
-    //            list.Reverse();
-    //            Console.WriteLine("\nобратный порядок -");
-    //            for (int a = 0; a < list.Count; a++)
-    //            {
-    //                Console.WriteLine(list[a]);
-    //            }
-    //        } 
-    //    }
 
-    //}
+    class TaskThree
+    {
+        public string TaskLoop(string f)
+        {
+            Console.WriteLine("Введите exit, чтобы выйти, или нажмите enter, чтобы продолжить");
+            string Exit = Console.ReadLine();
+            if (Exit != "exit")
+            {
+                if (f == "task")
+                {
+                    return Task3;
+                }
+            }
+            return "complete";
+        }
+        public string Task3
+        {
+            get
+            {
+                var list = new LinkedList<string>() { };
+                Console.WriteLine("создайте список от 3 до 6 элементом: ");
+                string readline = Console.ReadLine();
+                list.AddFirst(readline);
+                var current = list.Find(readline);
+                for (int i = 0; i < 5; i++)
+                {
+                    
+                    string listadd = Console.ReadLine();
+                    if (listadd == "" && i <= 6 && i >= 3)
+                    {
+                        break;
+                    }
+                    list.AddBefore(current, listadd);
+                }
+                list.RemoveLast();
+                list.AddFirst(readline);
+                Console.WriteLine("\nпорядок -");
+                foreach (string a in list)
+                {
+                    Console.WriteLine(a);
+                }
+                return TaskLoop("task");
+            }
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
         var object1 = new Tasks();
+        var object2 = new TaskThree();
             Console.Write("1 - Задача 1 ### 2 - Задача 2 ### 3 - Задача 3\n-> ");
             int task = int.Parse(Console.ReadLine());
             switch (task)
@@ -162,7 +181,7 @@ namespace HomeWorkCollection
                 case 3:
                     {
                         Console.WriteLine("\nВыбрано задача 3\n");
-
+                        Console.WriteLine(object2.Task3);
                     }
                     break;
             }
