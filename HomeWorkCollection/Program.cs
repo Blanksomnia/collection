@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -11,37 +12,23 @@ namespace HomeWorkCollection
    
      class Tasks
      {
-        public void TaskLoop()
+        public void TaskLoop(string result)
         {
-            var object1 = new TaskThree();
-            Console.WriteLine("Введите exit, чтобы выйти, или нажмите enter, чтобы открыть меню");
-            string Exit = Console.ReadLine();
-            Console.Write("1 - Задача 1 ### 2 - Задача 2 ### 3 - Задача 3\n-> ");
-            int task = int.Parse(Console.ReadLine());
-            switch (task)
+            Console.WriteLine("введите Exit, чтобы выйти ### нажмите Enter, чтобы продолжить");
+            string readline = Console.ReadLine();
+            if(readline != "Exit") 
             {
-                case 1:
-                    {
-                        Console.WriteLine("\nВыбрано задача 1\n");
-                        Task();
-                        TaskLoop();
-                    }
-                    break;
-                case 2:
-                    {
-                        Console.WriteLine("\nВыбрано задача 2\n");
-                        TaskTwo();
-                        TaskLoop();
-                    }
-                    break;
-                case 3:
-                    {
-                        Console.WriteLine("\nВыбрано задача 3\n");
-                        object1.Task3();
-                        TaskLoop();
-                    }
-                    break;
+                if(result == "a")
+                {
+                    Task();
+                }
+                else if(result == "b")
+                {
+                    TaskTwo();
+                }
             }
+            Console.WriteLine("Завершение работы");
+            Console.ForegroundColor = ConsoleColor.Black;
         }
         public void Task()
         {
@@ -59,6 +46,7 @@ namespace HomeWorkCollection
                 {
                     Console.WriteLine(list[i]);
                 }
+                TaskLoop("a");
         }
         private Dictionary<string, int> list1 = new Dictionary<string, int>();
         public void TaskTwo()
@@ -108,13 +96,13 @@ namespace HomeWorkCollection
                             continue;
                         }
                     }
-                    Console.WriteLine("напишите STOP, чтобы перейти в меню");
+                    Console.WriteLine("напишите STOP, чтобы закончить");
                     if (f == "STOP") 
                     {
                         while0 = false;
                     }
                 }
-                TaskLoop();
+            TaskLoop("b");
         } 
      }
 
@@ -122,6 +110,14 @@ namespace HomeWorkCollection
 
     class TaskThree
     {
+        public void TaskLoop()
+        {
+            string readline = Console.ReadLine();
+            if (readline != "Exit")
+            {
+                Task3();
+            }
+        }
         public void Task3()
         {
                 var list = new LinkedList<string>() { };
@@ -147,7 +143,7 @@ namespace HomeWorkCollection
                 {
                     Console.WriteLine(a);
                 }
-                object1.TaskLoop();
+            TaskLoop();
         }
 
     }
@@ -156,9 +152,33 @@ namespace HomeWorkCollection
         static void Main(string[] args)
         {
             var object1 = new Tasks();
-            object1.TaskLoop();
-            
-            
+            var object2 = new TaskThree();
+            Console.Write("1 - Задача 1 ### 2 - Задача 2 ### 3 - Задача 3\n-> ");
+            int task = int.Parse(Console.ReadLine());
+            switch (task)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("\nВыбрано задача 1\n");
+                        object1.Task();
+                    }
+                    break;
+                case 2:
+                    {
+                        Console.WriteLine("\nВыбрано задача 2\n");
+                        object1.TaskTwo();
+                        
+                    }
+                    break;
+                case 3:
+                    {
+                        Console.WriteLine("\nВыбрано задача 3\n");
+                        object2.Task3();
+                    }
+                    break;
+            }
+
+
         }
     }
 }
